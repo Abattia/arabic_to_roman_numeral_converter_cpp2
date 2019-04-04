@@ -9,6 +9,13 @@ namespace ArabicToRomanTests
     TEST_CLASS(ArabicToRomanShould)
     {
 	public:
+		TEST_METHOD(ReturnXWith10)
+		{
+			string result = ArabicToRomanServices::ToRoman(10);
+
+			Assert::AreEqual(string("X"), result);
+		}
+
 		TEST_METHOD(ReturnIIIWith3)
 		{
 			string result = ArabicToRomanServices::ToRoman(3);
